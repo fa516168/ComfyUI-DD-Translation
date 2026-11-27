@@ -1,4 +1,913 @@
 {
+    "TextWildcardSource": {
+        "title": "文本通配符源",
+        "inputs": {
+            "category": "分类",
+            "text_wildcard": "文本通配符"
+        },
+        "widgets": {
+            "mode": "模式",
+            "seed": "种子"
+        },
+        "outputs": {
+            "text": "文本",
+            "name": "名称"
+        }
+    },
+    "JZL_MiniMaxVideoEdit": {
+        "title": "JZL海螺视频编辑",
+        "inputs": {
+            "model": "模型",
+            "clip": "CLlP",
+            "vae": "vae",
+            "audio_vae": "音频VAE",
+            "bus": "总线"
+        },
+        "widgets": {
+            "story_name": "故事模式名称",
+            "manager_settings": "管理器设置",
+            "video_desc": "视频描述",
+            "image_desc": "图像描述"
+        },
+        "outputs": {
+            "videos": "视频"
+        }
+    },
+    "MingImagePromptBuilderKJ": {
+        "title": "Ming图像提示词构建器KJ",
+        "inputs": {
+            "aspect_ratio": "宽高比",
+            "image": "图像",
+            "import_json": "导入Json",
+            "import_mode": "导入模式",
+            "bboxes": "多边界框"
+        },
+        "widgets": {
+            "width": "宽度",
+            "height": "高度",
+            "custom": "自定义",
+            "ambient_lighting": "环境光照",
+            "image_style": "图像风格",
+            "elements_data": "元素数据",
+            "bg_brightness": "背景亮度",
+            "output_format": "输出格式"
+        },
+        "outputs": {
+            "prompt": "提示词",
+            "preview": "预览",
+            "bboxes": "多边界框",
+            "width": "宽度",
+            "height": "高度"
+        }
+    },
+    "SkipDiTBlocksKJ": {
+        "title": "跳过DiT区块KJ",
+        "inputs": {
+            "model": "模型"
+        },
+        "widgets": {
+            "double_blocks": "双层模块",
+            "single_blocks": "单个模块",
+            "start_percent": "起始百分比",
+            "end_percent": "结束百分比"
+        },
+        "outputs": {
+            "model": "模型"
+        }
+    },
+    "MiniMaxH3AudioPrefixCarryEXPT8": {
+        "title": "海螺H3音频前缀携带EXPT8",
+        "inputs": {
+            "target_av_latent": "目标音视频潜空间",
+            "previous_av_latent": "上一个音视频潜空间"
+        },
+        "widgets": {
+            "context_rows": "上下文行集",
+            "previous_end_row": "上一个结束行"
+        },
+        "outputs": {
+            "av_latent": "音视频潜空间",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3AudioTailReleaseEXPT8": {
+        "title": "海螺H3音频尾部发布EXPT8",
+        "inputs": {
+            "model": "模型",
+            "av_latent": "音视频潜空间",
+            "mode": "模式"
+        },
+        "widgets": {
+            "prefix_rows": "前缀行集",
+            "release_step": "发布步数"
+        },
+        "outputs": {
+            "model": "模型",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3AudioTailAuditEXPT8": {
+        "title": "海螺H3音频尾部审计EXPT8",
+        "inputs": {
+            "model": "模型",
+            "after_sampling": "之后采样"
+        },
+        "widgets": {},
+        "outputs": {
+            "av_latent": "音视频潜空间",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3DMADRenoiseSetupEXPT8": {
+        "title": "海螺H3 DMAD二次降噪设置EXPT8",
+        "inputs": {
+            "model": "模型",
+            "av_latent": "音视频潜空间"
+        },
+        "widgets": {
+            "steps": "步数"
+        },
+        "outputs": {
+            "model": "模型",
+            "sampler": "采样器",
+            "sigmas": "强度",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3FinalAudioAuditEXPT8": {
+        "title": "海螺H3最终音频审计EXPT8",
+        "inputs": {
+            "final_audio": "最终音频",
+            "language": "语言",
+            "transcription_scope": "转写作用域"
+        },
+        "widgets": {
+            "expected_text": "预期文本",
+            "asr_model_directory": "语音识别模型目录",
+            "windows_json": "窗口Json",
+            "beam_size": "束流尺寸",
+            "cpu_threads": "Cpu线程",
+            "unload_after": "卸载之后"
+        },
+        "outputs": {
+            "audio": "音频",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3HyperFlowFlashLoaderT8": {
+        "title": "海螺H3超光流极速加载器T8",
+        "inputs": {
+            "model_name": "模型名称",
+            "weights_in": "权重输入"
+        },
+        "widgets": {},
+        "outputs": {
+            "model": "模型",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3FlashCheckpointSigmasT8": {
+        "title": "海螺H3极速加速检查点强度T8",
+        "inputs": {
+            "model": "模型",
+            "schedule": "调度"
+        },
+        "widgets": {},
+        "outputs": {
+            "sigmas": "强度"
+        }
+    },
+    "MiniMaxH3ICRecipeEXPT8": {
+        "title": "海螺H3 IC配方EXPT8",
+        "inputs": {
+            "caption": "说明",
+            "preset": "预设"
+        },
+        "widgets": {
+            "custom_sigmas": "自定义强度值"
+        },
+        "outputs": {
+            "prompt": "提示词",
+            "sigmas": "强度",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3ICComposeEXPT8": {
+        "title": "海螺H3 IC合成EXPT8",
+        "inputs": {
+            "video_latent": "视频潜空间",
+            "reference_latent": "参考潜空间",
+            "silence_name": "静音名称",
+            "audio_fit": "音频适配"
+        },
+        "widgets": {
+            "pin_audio": "固定音频"
+        },
+        "outputs": {
+            "av_latent": "音视频潜空间",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3ICSamplerEXPT8": {
+        "title": "海螺H3 IC采样器EXPT8",
+        "inputs": {
+            "model": "模型",
+            "av_latent": "音视频潜空间",
+            "preset": "预设"
+        },
+        "widgets": {},
+        "outputs": {
+            "model": "模型",
+            "sampler": "采样器",
+            "sigmas": "强度",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3LatentUpscale2DT8": {
+        "title": "海螺H3潜空间放大2DT8",
+        "inputs": {
+            "av_latent": "音视频潜空间",
+            "model_name": "模型名称",
+            "size_mode": "尺寸模式",
+            "aspect_policy": "宽高比策略",
+            "precision": "精度",
+            "release_policy": "发布策略"
+        },
+        "widgets": {
+            "sharpness": "锐度",
+            "scale_by": "缩放系数",
+            "target_megapixels": "目标百万像素",
+            "target_width": "目标宽度",
+            "target_height": "目标高度",
+            "max_anisotropy": "最大各向异性",
+            "chunk_frames": "分块帧"
+        },
+        "outputs": {
+            "av_latent": "音视频潜空间",
+            "width": "宽度",
+            "height": "高度",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3LoRAWindowT8": {
+        "title": "海螺H3低噪声RA窗口T8",
+        "inputs": {
+            "model": "模型",
+            "lora_name": "LoRA名称",
+            "previous_hooks": "上一个钩子"
+        },
+        "widgets": {
+            "strength": "强度",
+            "start_percent": "起始百分比",
+            "end_percent": "结束百分比"
+        },
+        "outputs": {
+            "hooks": "钩子",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3AttachLoRAWindowsT8": {
+        "title": "海螺H3挂载LoRA窗口T8",
+        "inputs": {
+            "model": "模型",
+            "positive": "正面条件"
+        },
+        "widgets": {
+            "windows_json": "窗口Json"
+        },
+        "outputs": {
+            "positive": "正面条件",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3PromptEditGuiderT8": {
+        "title": "海螺H3提示词编辑引导器T8",
+        "inputs": {
+            "model": "模型",
+            "original": "原始",
+            "edited": "已编辑"
+        },
+        "widgets": {
+            "edit_strength": "编辑强度",
+            "first_step": "首个步数"
+        },
+        "outputs": {
+            "guider": "引导器"
+        }
+    },
+    "MiniMaxH3PromptEditAuditT8": {
+        "title": "海螺H3提示词编辑审计T8",
+        "inputs": {
+            "av_latent": "音视频潜空间",
+            "guider": "引导器"
+        },
+        "widgets": {},
+        "outputs": {
+            "av_latent": "音视频潜空间",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3CorrectorLoaderT8": {
+        "title": "海螺H3校正器加载器T8",
+        "inputs": {
+            "corrector": "校正器"
+        },
+        "widgets": {},
+        "outputs": {
+            "corrector": "校正器",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3CorrectorApplyT8": {
+        "title": "海螺H3校正器应用T8",
+        "inputs": {
+            "model": "模型",
+            "corrector": "校正器",
+            "sigmas": "强度"
+        },
+        "widgets": {
+            "strength": "强度",
+            "budget_fraction": "上限阈值比例",
+            "velocity_floor": "力度下限",
+            "start_step": "起始步",
+            "end_step": "结束步长"
+        },
+        "outputs": {
+            "model": "模型",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3TwoPassAudioContinueEXPT8": {
+        "title": "海螺H3二通过音频继续EXPT8",
+        "inputs": {
+            "coarse_output": "粗糙输出",
+            "high_latent": "高潜空间",
+            "visual_noise": "视觉噪声",
+            "low_sigmas": "低强度",
+            "high_sigmas": "高强度",
+            "coarse_sampler": "粗糙采样器"
+        },
+        "widgets": {},
+        "outputs": {
+            "av_latent": "音视频潜空间",
+            "noise": "噪声",
+            "report_json": "报告JSON"
+        }
+    },
+    "MiniMaxH3BatchEpisodeVideoSaverConsole": {
+        "title": "海螺H3批次剧集视频保存器控制台",
+        "inputs": {
+            "video": "视频",
+            "episode_title": "剧集标题",
+            "drama_name": "短剧名称"
+        },
+        "widgets": {
+            "frame_rate": "帧速率",
+            "output_path": "输出路径",
+            "filename_prefix": "文件名前缀"
+        },
+        "outputs": {
+            "已保存文件": "已保存文件"
+        }
+    },
+    "MiniMaxH3DirectorSampling": {
+        "title": "海螺H3导演采样",
+        "inputs": {},
+        "widgets": {},
+        "outputs": {
+            "sampling": "采样"
+        }
+    },
+    "MiniMaxH3DirectorConsole": {
+        "title": "海螺H3导演控制台",
+        "inputs": {
+            "model": "模型",
+            "clip": "CLlP",
+            "video_vae": "视频VAE",
+            "audio_vae": "音频VAE",
+            "sampling": "采样",
+            "refine": "细化",
+            "face_refine": "面部细化",
+            "i2v_groups": "图生视频组",
+            "r2v_groups": "参考图生成视频组",
+            "semantic_bridge": "语义桥接",
+            "selflift": "自提升",
+            "sigmas": "强度",
+            "vsr": "vsr"
+        },
+        "widgets": {},
+        "outputs": {
+            "images": "图像",
+            "audio": "音频",
+            "fps": "帧率",
+            "frame_count": "帧数",
+            "最终输出": "最终输出",
+            "本集名称": "本集名称",
+            "短剧名称": "短剧名称",
+            "source_images": "源图像集",
+            "report": "报告",
+            "images_pre_refine": "细化前图像",
+            "images_pre_face_refine": "面部细化前图像"
+        }
+    },
+    "MiniMaxH3SamplingConsole": {
+        "title": "海螺H3采样控制台",
+        "inputs": {},
+        "widgets": {},
+        "outputs": {
+            "sampling": "采样"
+        }
+    },
+    "MiniMaxH3DirectorRefineConsole": {
+        "title": "海螺H3导演细化控制台",
+        "inputs": {
+            "mode": "模式",
+            "upscale_method": "放大方法",
+            "latent_upscale_model": "潜空间放大模型",
+            "sampler": "采样器",
+            "refine_model": "细化模型",
+            "sigmas": "强度",
+            "upscale_model": "放大模型",
+            "seed_mode": "种子模式",
+            "aspect_ratio": "宽高比"
+        },
+        "widgets": {
+            "megapixels": "百万像素",
+            "passes": "传递",
+            "width": "宽度",
+            "height": "高度",
+            "skip_fl2v": "跳过Fl2v",
+            "confirm_first_pass": "确认第一遍",
+            "enable_latent_chunking": "启用潜空间分块",
+            "enable_tiling": "启用分块",
+            "tile_count": "分块计数",
+            "tile_overlap": "分块重叠度",
+            "seed": "种子"
+        },
+        "outputs": {
+            "refine": "细化",
+            "width": "宽度",
+            "height": "高度"
+        }
+    },
+    "AILab_MultiMatte": {
+        "title": "AI实验室多遮罩",
+        "inputs": {
+            "image": "图像",
+            "model": "模型",
+            "background_color": "背景颜色"
+        },
+        "widgets": {
+            "prompt": "提示词",
+            "mask_blur": "遮罩模糊",
+            "mask_offset": "遮罩偏移",
+            "invert_output": "反转输出",
+            "refine_foreground": "前景精修",
+            "unload_model": "卸载释放模型",
+            "background": "背景"
+        },
+        "outputs": {
+            "IMAGE": "图像",
+            "MASK": "遮罩",
+            "MASK_IMAGE": "遮罩图像"
+        }
+    },
+    "AILab_RMBG3": {
+        "title": "AI实验室背景移除3",
+        "inputs": {
+            "model": "模型",
+            "clip": "CLlP",
+            "vae": "vae",
+            "image": "图像",
+            "background_color": "背景颜色"
+        },
+        "widgets": {
+            "sensitivity": "灵敏度",
+            "mask_blur": "遮罩模糊",
+            "mask_offset": "遮罩偏移",
+            "invert_output": "反转输出",
+            "refine_foreground": "前景精修",
+            "unload_model": "卸载释放模型",
+            "steps": "步数",
+            "seed": "种子",
+            "background": "背景"
+        },
+        "outputs": {
+            "IMAGE": "图像",
+            "MASK": "遮罩",
+            "MASK_IMAGE": "遮罩图像"
+        }
+    },
+    "T8ZhenzhenAnimaV1": {
+        "title": "T8贞贞Anima V1",
+        "inputs": {},
+        "widgets": {
+            "prompt": "提示词",
+            "ratio": "比例"
+        },
+        "outputs": {
+            "image": "图像",
+            "image_url": "图像链接",
+            "task_id": "任务ID",
+            "response": "响应"
+        }
+    },
+    "T8ZhenzhenMagi2Video": {
+        "title": "T8贞贞Magi2视频",
+        "inputs": {},
+        "widgets": {
+            "model": "模型",
+            "generation_type": "生成迭代类型",
+            "prompt": "提示词",
+            "seconds": "秒数",
+            "ratio": "比例",
+            "generate_audio": "生成音频",
+            "seed": "种子",
+            "api_config": "Api配置",
+            "skip_error": "跳过错误"
+        },
+        "outputs": {}
+    },
+    "Minimax H3 图像高清修复 分块": {
+        "title": "Minimax H3图像高清修复分块",
+        "inputs": {
+            "图像": "图像",
+            "模型": "模型",
+            "CLIP": "CLlP",
+            "VAE": "VAE",
+            "LoRA": "LORA",
+            "视觉编码尺寸": "视觉编码尺寸",
+            "采样器": "采样器",
+            "调度器": "调度器",
+            "颜色匹配": "颜色匹配"
+        },
+        "widgets": {
+            "LoRA强度": "LoRA强度",
+            "提示词": "提示词",
+            "输出长边": "输出长边",
+            "分块尺寸": "分块尺寸",
+            "种子值": "种子值",
+            "步数": "步数",
+            "释放模型": "释放模型"
+        },
+        "outputs": {
+            "图像": "图像"
+        }
+    },
+    "H3TiledEncodeGH": {
+        "title": "H3分块编码GH",
+        "inputs": {
+            "image": "图像",
+            "clip": "CLlP",
+            "vae": "vae",
+            "prompt": "提示词",
+            "output_long_edge": "输出长边缘",
+            "tile_size": "分块尺寸",
+            "owner": "所有者"
+        },
+        "widgets": {
+            "vision_size": "视觉尺寸"
+        },
+        "outputs": {
+            "h3_tile_conditions": "H3分块条件"
+        }
+    },
+    "H3TiledSampleGH": {
+        "title": "H3分块采样GH",
+        "inputs": {
+            "image": "图像",
+            "model": "模型",
+            "vae": "vae",
+            "conditions": "条件",
+            "seed": "种子",
+            "steps": "步数",
+            "sampler_name": "采样器名称",
+            "scheduler": "调度器",
+            "owner": "所有者"
+        },
+        "widgets": {},
+        "outputs": {
+            "h3_repaired_tiles": "H3已修复分块"
+        }
+    },
+    "H3TiledFinishGH": {
+        "title": "H3分块完成GH",
+        "inputs": {
+            "image": "图像",
+            "tiles": "分块",
+            "color_match": "颜色匹配",
+            "owner": "所有者",
+            "model": "模型",
+            "clip": "CLlP",
+            "vae": "vae"
+        },
+        "widgets": {
+            "release_models": "发布模型"
+        },
+        "outputs": {
+            "image": "图像"
+        }
+    },
+    "WASH3ImageVisRowConditioning": {
+        "title": "洗涤3图像可视化行条件",
+        "inputs": {
+            "clip": "CLlP",
+            "vae": "vae",
+            "prompt": "提示词",
+            "placement": "放置",
+            "image_1": "图像1",
+            "image_2": "图像2",
+            "image_3": "图像3",
+            "image_4": "图像4",
+            "image_5": "图像5",
+            "image_6": "图像6",
+            "image_7": "图像7",
+            "image_8": "图像8",
+            "image_9": "图像9"
+        },
+        "widgets": {
+            "width": "宽度",
+            "height": "高度",
+            "strength": "强度"
+        },
+        "outputs": {
+            "positive": "正面条件",
+            "latent": "潜空间"
+        }
+    },
+    "WASH3StructureVideo": {
+        "title": "洗涤3结构视频",
+        "inputs": {
+            "clip": "CLlP",
+            "vae": "vae",
+            "structure": "结构",
+            "first_frame": "首帧",
+            "structure_type": "结构类型",
+            "encoding": "编码",
+            "structure_vae": "结构Vae"
+        },
+        "widgets": {
+            "summary": "摘要",
+            "description": "描述",
+            "soundscape": "声音斗篷",
+            "length": "时长",
+            "fps": "帧率",
+            "width": "宽度",
+            "height": "高度",
+            "looks_like": "外观类似",
+            "not_shown": "不显示"
+        },
+        "outputs": {
+            "positive": "正面条件",
+            "negative": "负面条件",
+            "latent": "潜空间",
+            "prompt": "提示词"
+        }
+    },
+    "WASH3WorldActions": {
+        "title": "洗涤3世界动作",
+        "inputs": {
+            "clip": "CLlP",
+            "positive": "正面条件",
+            "negative": "负面条件"
+        },
+        "widgets": {
+            "actions": "动作"
+        },
+        "outputs": {
+            "positive": "正面条件",
+            "negative": "负面条件"
+        }
+    },
+    "WASLLMLoader": {
+        "title": "WAS大模型加载器",
+        "inputs": {
+            "model": "模型",
+            "mmproj": "多模态投影",
+            "sampling_mode": "采样模式",
+            "chat_format": "对话格式"
+        },
+        "widgets": {
+            "max_tokens": "最大值标记",
+            "thinking": "思考中",
+            "n_ctx": "上下文长度",
+            "gpu_layers": "显卡图层",
+            "flash_attn": "极速加速注意力",
+            "fast_decode": "快速解码"
+        },
+        "outputs": {
+            "llm": "llm"
+        }
+    },
+    "WASH3SceneAttention": {
+        "title": "洗涤3场景注意力",
+        "inputs": {
+            "model": "模型",
+            "positions": "位置"
+        },
+        "widgets": {
+            "scenes": "场景",
+            "shared_frames": "共享帧",
+            "select_block": "选择模块",
+            "start_percent": "起始百分比",
+            "end_percent": "结束百分比"
+        },
+        "outputs": {
+            "model": "模型"
+        }
+    },
+    "WASH3StructureRenderer": {
+        "title": "洗涤3结构渲染器",
+        "inputs": {
+            "model": "模型",
+            "audio_vae": "音频VAE",
+            "control_lora": "控制LORA",
+            "steps_lora": "步数LORA"
+        },
+        "widgets": {
+            "control_strength": "控制强度",
+            "steps_strength": "步数强度"
+        },
+        "outputs": {
+            "model": "模型"
+        }
+    },
+    "WASH3World": {
+        "title": "洗涤3世界",
+        "inputs": {
+            "model": "模型",
+            "lora_name": "LoRA名称"
+        },
+        "widgets": {
+            "strength": "强度"
+        },
+        "outputs": {
+            "model": "模型"
+        }
+    },
+    "WASApplyCodeEdits": {
+        "title": "WAS应用代码编辑",
+        "inputs": {},
+        "widgets": {
+            "reply": "回复",
+            "code": "代码"
+        },
+        "outputs": {
+            "code": "代码",
+            "diff": "差异",
+            "report": "报告",
+            "all_applied": "全部已应用"
+        }
+    },
+    "HeyGenVoiceCloneTextToSpeechNode": {
+        "title": "虚拟人语音克隆文本到语音节点",
+        "inputs": {
+            "model": "模型"
+        },
+        "widgets": {},
+        "outputs": {
+            "audio": "音频"
+        }
+    },
+    "MeshyTextureN1Node": {
+        "title": "3D建模纹理N1节点",
+        "inputs": {
+            "model": "模型",
+            "meshy_task_id": "3D建模任务ID",
+            "front_view": "正查看"
+        },
+        "widgets": {
+            "view0": "视图0",
+            "view1": "视图1",
+            "view2": "视图2",
+            "view3": "视图3",
+            "enable_original_uv": "启用原始UV"
+        },
+        "outputs": {
+            "meshy_task_id": "3D建模任务ID",
+            "GLB": "GLB",
+            "FBX": "FBX"
+        }
+    },
+    "MeshyImageToReliefNode": {
+        "title": "3D建模图像至浮雕节点",
+        "inputs": {
+            "image": "图像",
+            "relief_type": "浮雕类型",
+            "carving_mode": "雕刻效果模式",
+            "base": "基础",
+            "bend": "弯曲"
+        },
+        "widgets": {
+            "carving_depth_mm": "雕刻效果深度毫米",
+            "size_mm": "尺寸毫米",
+            "base_thickness_mm": "基础厚度毫米",
+            "removal_threshold": "移除阈值",
+            "seed": "种子",
+            "mesh_resolution": "网格分辨率",
+            "color_mapping": "颜色映射"
+        },
+        "outputs": {
+            "GLB": "GLB",
+            "STL": "STL",
+            "OBJ": "目标",
+            "FBX": "FBX",
+            "USDZ": "USDZ",
+            "3MF": "3MF",
+            "depth_map": "深度图",
+            "preview": "预览"
+        }
+    },
+    "PrunaReferenceToVideoNode": {
+        "title": "Pruna参考转视频节点",
+        "inputs": {
+            "model": "模型"
+        },
+        "widgets": {},
+        "outputs": {
+            "video": "视频"
+        }
+    },
+    "PrunaAvatarNode": {
+        "title": "Pruna虚拟形象节点",
+        "inputs": {
+            "image": "图像",
+            "speech": "语音",
+            "voice": "语音",
+            "language": "语言",
+            "audio": "音频",
+            "resolution": "分辨率"
+        },
+        "widgets": {
+            "script": "脚本",
+            "voice_prompt": "语音提示词",
+            "prompt": "提示词",
+            "enhance_prompt": "增强提示词",
+            "seed": "种子"
+        },
+        "outputs": {
+            "video": "视频"
+        }
+    },
+    "TypeSafeJevYesNo": {
+        "title": "类型安全Jev是否",
+        "inputs": {
+            "model": "模型"
+        },
+        "widgets": {
+            "question": "问题",
+            "threshold": "阈值"
+        },
+        "outputs": {
+            "result": "结果",
+            "answer": "回答",
+            "probability": "概率"
+        }
+    },
+    "TypeSafeJevChoice": {
+        "title": "类型安全Jev选择",
+        "inputs": {
+            "model": "模型"
+        },
+        "widgets": {
+            "question": "问题",
+            "options": "选项"
+        },
+        "outputs": {
+            "choice": "选择",
+            "option_index": "选项索引",
+            "confidence": "置信度"
+        }
+    },
+    "TypeSafeJevPickImage": {
+        "title": "类型安全Jev选取图像",
+        "inputs": {
+            "model": "模型",
+            "images": "图像",
+            "text": "文本"
+        },
+        "widgets": {
+            "question": "问题"
+        },
+        "outputs": {
+            "index": "索引",
+            "confidence": "置信度"
+        }
+    },
+    "TypeSafeJevScore": {
+        "title": "类型安全Jev评分",
+        "inputs": {
+            "model": "模型"
+        },
+        "widgets": {
+            "question": "问题",
+            "threshold": "阈值"
+        },
+        "outputs": {
+            "result": "结果",
+            "score": "评分"
+        }
+    },
     "MinimaxH3ImageEditApply_EditUtils": {
         "title": "海螺H3图像编辑应用编辑工具",
         "inputs": {
@@ -29,30 +938,29 @@
     },
     "MossImageModelConfig_EditUtils": {
         "title": "苔藓图像模型配置编辑工具",
-        "inputs": {},
         "widgets": {
             "instruction": "指令"
         },
         "outputs": {
             "model_config": "模型配置"
-        }
+        },
+        "inputs": {}
     },
     "MinimaxH3ImageModelConfig_EditUtils": {
         "title": "海螺H3图像模型配置编辑工具",
-        "inputs": {},
         "widgets": {
             "instruction": "指令"
         },
         "outputs": {
             "model_config": "模型配置"
-        }
+        },
+        "inputs": {}
     },
     "MinimaxH3ImageOutputExtractor_EditUtils": {
         "title": "海螺H3图像输出提取器编辑工具",
         "inputs": {
             "custom_output": "自定义输出"
         },
-        "widgets": {},
         "outputs": {
             "pad_info": "填充信息",
             "main_image": "主图像",
@@ -63,7 +971,8 @@
             "mask": "遮罩",
             "minimax_refs": "海螺参考",
             "target_size": "目标尺寸"
-        }
+        },
+        "widgets": {}
     },
     "MossImageConfigPreparer_EditUtils": {
         "title": "苔藓图像配置准备器编辑工具",
@@ -180,14 +1089,14 @@
         }
     },
     "ImpactSEGSToBoundingBoxes": {
-        "title": "效果强度SEGSTo包围框",
+        "title": "效果强度分割转换包围框",
         "inputs": {
             "segs": "分割块"
         },
-        "widgets": {},
         "outputs": {
             "bboxes": "多边界框"
-        }
+        },
+        "widgets": {}
     },
     "ImpactBoundingBoxesToSEGS": {
         "title": "效果强度包围框到分割块",
@@ -207,11 +1116,11 @@
         "inputs": {
             "segs": "分割块"
         },
-        "widgets": {},
         "outputs": {
             "output_0": "输出0",
             "output_1": "输出1"
-        }
+        },
+        "widgets": {}
     },
     "AssembleSEGSList": {
         "title": "组装分割块列表",
@@ -219,21 +1128,21 @@
             "seg_header": "分割头部",
             "seg_elt": "分割元素"
         },
-        "widgets": {},
         "outputs": {
             "output_0": "输出0"
-        }
+        },
+        "widgets": {}
     },
     "ImpactDecomposeSEGSList": {
         "title": "效果强度分解分割块列表",
         "inputs": {
             "segs": "分割块"
         },
-        "widgets": {},
         "outputs": {
             "output_0": "输出0",
             "output_1": "输出1"
-        }
+        },
+        "widgets": {}
     },
     "ImpactAssembleSEGSList": {
         "title": "效果强度组装分割块列表",
@@ -241,30 +1150,30 @@
             "seg_header": "分割头部",
             "seg_elt": "分割元素"
         },
-        "widgets": {},
         "outputs": {
             "output_0": "输出0"
-        }
+        },
+        "widgets": {}
     },
     "JZL_MiniMaxH3MediaLoader": {
         "title": "JZL海螺H3媒体加载器",
-        "inputs": {},
         "widgets": {
             "media_settings": "媒体设置"
         },
         "outputs": {
             "ref2va参考总线": "ref2va参考总线"
-        }
+        },
+        "inputs": {}
     },
     "JZL_MiniMaxSkillLoader": {
         "title": "JZL海螺技能加载器",
         "inputs": {
             "skill_file": "技能文件"
         },
-        "widgets": {},
         "outputs": {
             "system_prompt": "系统提示词"
-        }
+        },
+        "widgets": {}
     },
     "MiniMaxH3PromptWeight": {
         "title": "海螺H3提示词权重",
@@ -421,10 +1330,10 @@
         "inputs": {
             "format": "格式"
         },
-        "widgets": {},
         "outputs": {
             "json": "json"
-        }
+        },
+        "widgets": {}
     },
     "MiniMaxH3LocalSFXCandidatesT8": {
         "title": "海螺H3本地音效抓拍写实吃T8",
@@ -473,7 +1382,7 @@
         }
     },
     "MiniMaxH3NAGEXPT8": {
-        "title": "海螺H3NAGEXPT8",
+        "title": "海螺H3 NAG实验版T8",
         "inputs": {
             "model": "模型",
             "nag_negative": "Nag负面条件"
@@ -492,16 +1401,16 @@
         }
     },
     "MiniMaxH3NAGAuditEXPT8": {
-        "title": "海螺H3NAGAudit EXPT8",
+        "title": "海螺H3 NAG审查EXPT8",
         "inputs": {
             "av_latent": "音视频潜空间",
             "runtime": "运行时"
         },
-        "widgets": {},
         "outputs": {
             "av_latent": "音视频潜空间",
             "report_json": "报告JSON"
-        }
+        },
+        "widgets": {}
     },
     "MiniMaxH3ProgressivePairedNoiseEXPT8": {
         "title": "海螺H3渐进式配对噪声EXPT8",
@@ -562,7 +1471,7 @@
         }
     },
     "MiniMaxH3TaoMateHDEXPT8": {
-        "title": "海螺H3Tao Mate HDEXPT8",
+        "title": "海螺H3道MateHD实验版T8",
         "inputs": {
             "model": "模型",
             "positive": "正面条件",
@@ -647,8 +1556,6 @@
     },
     "T8Zhenzhen_Seedream_55_Layers_LowPrice": {
         "title": "T8贞贞梦境视频55图层低价格",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "images": "图像",
             "masks": "掩码",
@@ -658,7 +1565,9 @@
             "response": "响应",
             "local_paths": "本地路径",
             "layers_json": "图层Json"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "T8Zhenzhen_Seedance_25_Draft_To_Video_LowPrice": {
         "title": "T8贞贞视频生成25草稿生成视频低价格",
@@ -761,7 +1670,6 @@
     },
     "T8Zhenzhen_GPT_Image_2_6_Workshop": {
         "title": "T8贞贞GPT图像26工作工坊",
-        "inputs": {},
         "widgets": {
             "prompt": "提示词"
         },
@@ -770,7 +1678,8 @@
             "image_urls": "图像链接列表",
             "response": "响应",
             "mask": "遮罩"
-        }
+        },
+        "inputs": {}
     },
     "T8ZhenzhenDoubaoSeedTTS20": {
         "title": "T8贞贞豆包种子TTS20",
@@ -801,7 +1710,6 @@
         "outputs": {
             "audio": "音频",
             "audio_url": "音频链接",
-            "speaker": "说话人",
             "task_id": "任务ID",
             "response": "响应"
         }
@@ -820,7 +1728,6 @@
     },
     "T8ZhenzhenGPTImage26Workshop": {
         "title": "T8贞贞GPTImage26工作工坊",
-        "inputs": {},
         "widgets": {
             "prompt": "提示词"
         },
@@ -829,10 +1736,11 @@
             "image_urls": "图像链接列表",
             "response": "响应",
             "mask": "遮罩"
-        }
+        },
+        "inputs": {}
     },
     "_H3ComfyVideo": {
-        "title": "H3Comfy视频",
+        "title": "H3 Comfy节点视频",
         "inputs": {
             "seconds": "秒数",
             "resolution": "分辨率",
@@ -865,19 +1773,18 @@
         }
     },
     "T8ZhenzhenMinimaxH3ComfyUIMax": {
-        "title": "T8贞贞海螺H3Comfy UIMax",
-        "inputs": {},
-        "widgets": {},
+        "title": "T8贞贞海螺H3 Comfy节点UI最大值",
         "outputs": {
             "video": "视频",
             "video_url": "视频链接",
             "task_id": "任务ID",
             "response": "响应"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "_BasicImage": {
         "title": "_基础图像",
-        "inputs": {},
         "widgets": {
             "prompt": "提示词"
         },
@@ -886,7 +1793,8 @@
             "image_url": "图像链接",
             "task_id": "任务ID",
             "response": "响应"
-        }
+        },
+        "inputs": {}
     },
     "T8ZhenzhenImageG26": {
         "title": "T8贞贞图像G26",
@@ -930,27 +1838,27 @@
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "model_3d": "模型3D",
             "model_url": "模型网址",
             "local_path": "本地路径",
             "task_id": "任务ID",
             "response": "响应"
-        }
+        },
+        "widgets": {}
     },
     "T8ZhenzhenKlingV4Image": {
         "title": "T8贞贞可灵V4图像",
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "images": "图像",
             "image_urls": "图像链接列表",
             "task_id": "任务ID",
             "response": "响应"
-        }
+        },
+        "widgets": {}
     },
     "T8ZhenzhenMAIImage27": {
         "title": "T8贞贞MAIImage27",
@@ -978,7 +1886,7 @@
             "sample_rate": "采样率",
             "channels": "通道",
             "enable_ssml": "启用Ssml",
-            "enable_cbr": "启用Cbr",
+            "enable_cbr": "启用固定码率",
             "enable_aigc_tag": "启用Aigc标签",
             "seed": "种子",
             "audio_urls": "音频链接列表",
@@ -1016,7 +1924,6 @@
     },
     "T8ZhenzhenGemini25TTS": {
         "title": "T8贞贞谷歌双子25TTS",
-        "inputs": {},
         "widgets": {
             "model": "模型",
             "prompt": "提示词",
@@ -1028,18 +1935,19 @@
             "audio_url": "音频链接",
             "task_id": "任务ID",
             "response": "响应"
-        }
+        },
+        "inputs": {}
     },
     "_LegacyVideoNode": {
         "title": "_旧版视频节点",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "video": "视频",
             "video_url": "视频链接",
             "task_id": "任务ID",
             "response": "响应"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "_H3Token": {
         "title": "H3令牌",
@@ -1102,7 +2010,6 @@
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "image": "图像",
             "image_url": "图像链接",
@@ -1110,12 +2017,11 @@
             "response": "响应",
             "mask": "遮罩",
             "local_path": "本地路径"
-        }
+        },
+        "widgets": {}
     },
     "T8ZhenzhenSeedream55Layers": {
         "title": "T8贞贞梦境视频55图层",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "images": "图像",
             "masks": "掩码",
@@ -1125,7 +2031,9 @@
             "response": "响应",
             "local_paths": "本地路径",
             "layers_json": "图层Json"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "T8ZhenzhenSeedance25DraftToVideo": {
         "title": "T8贞贞视频生成25草稿生成视频",
@@ -1148,11 +2056,10 @@
         }
     },
     "Tripo3DBase": {
-        "title": "Tripo3DBase",
+        "title": "Tripo 3D基础",
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "model_3d": "模型3D",
             "model_url": "模型网址",
@@ -1162,7 +2069,8 @@
             "files_json": "文件Json",
             "part_names_json": "部件名称列表Json",
             "response": "响应"
-        }
+        },
+        "widgets": {}
     },
     "MiniMaxH3DirectorRelayVSR": {
         "title": "海螺H3导演中继VSR",
@@ -1269,7 +2177,7 @@
         }
     },
     "WASVideoRemoveDust": {
-        "title": "WAS视频移除Dust",
+        "title": "WAS视频移除灰尘",
         "inputs": {
             "video": "视频",
             "polarity": "极性",
@@ -1307,7 +2215,7 @@
         }
     },
     "WASVideoSubtitles": {
-        "title": "WAS视频子标题",
+        "title": "WAS视频字幕",
         "inputs": {
             "images": "图像",
             "subtitle_file": "字幕文件",
@@ -1335,7 +2243,7 @@
         }
     },
     "WASVideoTimecode": {
-        "title": "WAS视频时间代码",
+        "title": "WAS视频时间码",
         "inputs": {
             "images": "图像",
             "display": "显示",
@@ -1353,7 +2261,7 @@
         },
         "outputs": {
             "images": "图像",
-            "end_timecode": "结束时间代码"
+            "end_timecode": "结束时间码"
         }
     },
     "WASVideoTrackCrop": {
@@ -1397,7 +2305,7 @@
         }
     },
     "WASCharacterAssemble": {
-        "title": "WASCharacter组装",
+        "title": "WAS角色节点组装",
         "inputs": {
             "body": "身体",
             "head": "头部",
@@ -1415,7 +2323,7 @@
             "head_scale": "头部缩放",
             "head_turn": "头部转向",
             "hair_follows_head": "头发跟随头部",
-            "feet_on_ground": "Feet开地面",
+            "feet_on_ground": "英尺；脚开地面",
             "extra_label": "额外标签",
             "placement": "放置"
         },
@@ -1425,7 +2333,7 @@
         }
     },
     "WASCharacterNeckJoin": {
-        "title": "WASCharacter颈部合并",
+        "title": "WAS角色节点颈部合并",
         "inputs": {
             "model_3d": "模型3D"
         },
@@ -1441,7 +2349,7 @@
         }
     },
     "WASCharacterRig": {
-        "title": "WASCharacter绑定",
+        "title": "WAS角色节点绑定",
         "inputs": {
             "model_3d": "模型3D",
             "rest_pose": "剩余姿态",
@@ -1458,18 +2366,18 @@
         }
     },
     "WASCharacterSprings": {
-        "title": "WASCharacter春季",
+        "title": "WAS角色节点弹簧；泉水",
         "inputs": {
             "model_3d": "模型3D",
             "hair": "头发"
         },
         "widgets": {
             "joints_per_chain": "关节每链式",
-            "max_chains": "最大值链式",
+            "max_chains": "最大值链条",
             "stiffness": "刚度",
             "drag": "拖动",
             "gravity": "重力",
-            "colliders": "colliders",
+            "colliders": "碰撞体",
             "cloth": "布料"
         },
         "outputs": {
@@ -1497,7 +2405,7 @@
         }
     },
     "WASCaptionStatistics": {
-        "title": "WASCaption统计",
+        "title": "WAS打标统计",
         "inputs": {
             "text": "文本",
             "names": "名称",
@@ -1512,13 +2420,13 @@
         "outputs": {
             "report": "报告",
             "phrases": "短语",
-            "flagged": "flagged",
+            "flagged": "被标记",
             "consistency": "一致性",
             "coverage": "覆盖率"
         }
     },
     "WASDatasetFilter": {
-        "title": "WASDataset过滤",
+        "title": "WAS数据集节点过滤",
         "inputs": {
             "dataset": "数据集",
             "keep": "保留",
@@ -1535,7 +2443,7 @@
         }
     },
     "WASDatasetHealth": {
-        "title": "WASDataset Health",
+        "title": "WAS数据集节点健康度",
         "inputs": {
             "folder": "文件夹",
             "dataset": "数据集"
@@ -1551,25 +2459,25 @@
         "outputs": {
             "report": "报告",
             "scores": "分数集",
-            "flagged": "flagged",
+            "flagged": "被标记",
             "duplicates": "重复"
         }
     },
     "WASDatasetMerge": {
-        "title": "WASDataset合并",
+        "title": "WAS数据集节点合并",
         "inputs": {
             "dataset_a": "数据集A",
             "dataset_b": "数据集B"
         },
-        "widgets": {},
         "outputs": {
             "dataset": "数据集",
             "count": "计数",
             "renamed": "已重命名"
-        }
+        },
+        "widgets": {}
     },
     "WASDatasetToLists": {
-        "title": "WASDataset到列表",
+        "title": "WAS数据集节点到列表",
         "inputs": {
             "dataset": "数据集"
         },
@@ -1586,18 +2494,18 @@
         }
     },
     "WASDatasetUpdate": {
-        "title": "WASDataset更新",
+        "title": "WAS数据集节点更新",
         "inputs": {
             "dataset": "数据集",
             "captions": "描述列表",
             "images": "图像",
             "names": "名称"
         },
-        "widgets": {},
         "outputs": {
             "dataset": "数据集",
             "changed": "已更改"
-        }
+        },
+        "widgets": {}
     },
     "WASLoadDataset": {
         "title": "WAS加载数据集",
@@ -1651,13 +2559,13 @@
         "inputs": {
             "image": "图像"
         },
-        "widgets": {},
         "outputs": {
             "images": "图像"
-        }
+        },
+        "widgets": {}
     },
     "WASImageVectorscope": {
-        "title": "WAS图像向量作用域",
+        "title": "WAS图像矢量示波器",
         "inputs": {
             "image": "图像"
         },
@@ -1669,7 +2577,7 @@
         }
     },
     "WASJudgeImages": {
-        "title": "WASJudge图像",
+        "title": "WAS评审图像",
         "inputs": {
             "clip": "CLlP",
             "images": "图像",
@@ -1690,17 +2598,17 @@
         }
     },
     "WASImageACESOutput": {
-        "title": "WAS图像ACESOutput",
+        "title": "WAS图像ACES输出",
         "inputs": {
             "images": "图像",
             "source": "源",
             "preset": "预设",
             "white": "白色"
         },
-        "widgets": {},
         "outputs": {
             "images": "图像"
-        }
+        },
+        "widgets": {}
     },
     "WASImageColorSpace": {
         "title": "WAS图像色彩空间",
@@ -1785,7 +2693,7 @@
         }
     },
     "WASImageDevelop": {
-        "title": "WAS图像Develop",
+        "title": "WAS图像显影",
         "inputs": {
             "images": "图像",
             "mask": "遮罩"
@@ -1797,11 +2705,11 @@
             "contrast": "对比度",
             "highlights": "高光",
             "shadows": "阴影",
-            "whites": "白色",
+            "whites": "白色部分、白场",
             "blacks": "黑场",
             "texture": "纹理",
             "clarity": "清晰度",
-            "dehaze": "dehaze",
+            "dehaze": "去雾",
             "vibrance": "自然饱和度",
             "saturation": "饱和度"
         },
@@ -1823,7 +2731,7 @@
         }
     },
     "WASImagePortraitRetouch": {
-        "title": "WAS图像肖像Retouch",
+        "title": "WAS图像肖像修图",
         "inputs": {
             "images": "图像",
             "mask": "遮罩",
@@ -1836,7 +2744,7 @@
         },
         "outputs": {
             "images": "图像",
-            "healed": "healed"
+            "healed": "已修复"
         }
     },
     "WASImageSpotlight": {
@@ -1849,8 +2757,8 @@
             "subject_exposure": "主体曝光",
             "subject_shadows": "主体阴影",
             "subject_clarity": "主体清晰度",
-            "surround_exposure": "Surround曝光",
-            "surround_saturation": "Surround饱和度",
+            "surround_exposure": "环绕声；围绕曝光",
+            "surround_saturation": "环绕声；围绕饱和度",
             "spill": "溢出",
             "softness": "柔和度"
         },
@@ -1866,7 +2774,7 @@
             "masks": "掩码",
             "bboxes": "多边界框",
             "grouping": "grouping",
-            "jobs": "任务"
+            "jobs": "工作、任务"
         },
         "widgets": {
             "context": "上下文",
@@ -1897,7 +2805,7 @@
             "names": "名称"
         },
         "outputs": {
-            "jobs": "任务",
+            "jobs": "工作、任务",
             "masks": "掩码",
             "count": "计数"
         }
@@ -1925,14 +2833,14 @@
         "inputs": {
             "images": "图像",
             "lens_filter": "镜头过滤",
-            "toner": "toner",
+            "toner": "调色剂、定影剂；墨粉",
             "paper": "论文"
         },
         "widgets": {
             "paper_grade": "论文等级",
             "exposure": "曝光",
-            "toner_amount": "Toner数量",
-            "sabattier": "sabattier"
+            "toner_amount": "调色剂、定影剂；墨粉数量",
+            "sabattier": "萨巴蒂尔效应"
         },
         "outputs": {
             "images": "图像"
@@ -1960,10 +2868,10 @@
             "tone": "色调"
         },
         "widgets": {
-            "dust": "dust",
+            "dust": "灰尘",
             "hairs": "头发",
-            "scratches": "scratches",
-            "mottle": "mottle",
+            "scratches": "划痕",
+            "mottle": "斑驳色纹",
             "seed": "种子"
         },
         "outputs": {
@@ -2034,7 +2942,7 @@
             "focus_depth": "焦点集中深度",
             "blur_amount": "模糊量",
             "focus_range": "焦点集中范围",
-            "blade_rotation": "Blade旋转",
+            "blade_rotation": "刀刃、刀片旋转",
             "highlight_bloom": "高光泛光",
             "focus_x": "焦点集中X",
             "focus_y": "焦点集中Y"
@@ -2078,9 +2986,9 @@
         }
     },
     "WASLUTFromLattice": {
-        "title": "WAS LUT来自Lattice",
+        "title": "WAS LUT来自三维格点",
         "inputs": {
-            "lattice": "lattice"
+            "lattice": "三维格点"
         },
         "widgets": {
             "tolerance": "容差",
@@ -2091,7 +2999,7 @@
         }
     },
     "WASLUTLattice": {
-        "title": "WASLUTLattice",
+        "title": "WAS色彩查找表格点",
         "inputs": {
             "size": "尺寸"
         },
@@ -2099,7 +3007,7 @@
             "probes": "探测"
         },
         "outputs": {
-            "lattice": "lattice"
+            "lattice": "三维格点"
         }
     },
     "WASImageScaleToTotalPixels": {
@@ -2119,7 +3027,6 @@
             "image": "图像",
             "width": "宽度",
             "height": "高度",
-            "megapixels": "百万像素",
             "mp_ratio": "Mp比例"
         }
     },
@@ -2179,18 +3086,18 @@
         }
     },
     "WASBluePixelModelLoader": {
-        "title": "WASBlue像素模型加载器",
+        "title": "WAS蓝色节点包像素模型加载器",
         "inputs": {
             "unet_name": "UNet名称",
             "weight_dtype": "权重类型"
         },
-        "widgets": {},
         "outputs": {
             "model": "模型"
-        }
+        },
+        "widgets": {}
     },
     "WASBluePixelVAELoader": {
-        "title": "WASBlue像素VAE加载器",
+        "title": "WAS蓝色节点包像素VAE加载器",
         "inputs": {
             "vae_name": "VAE名称"
         },
@@ -2224,7 +3131,7 @@
         }
     },
     "WASImageGraduatedMask": {
-        "title": "WAS图像Graduated遮罩",
+        "title": "WAS图像渐变/刻度化遮罩",
         "inputs": {
             "images": "图像",
             "profile": "配置",
@@ -2285,7 +3192,7 @@
         }
     },
     "WASMeshBakeTextures": {
-        "title": "WASMesh烘焙纹理",
+        "title": "WAS网格节点烘焙纹理",
         "inputs": {
             "model_3d": "模型3D",
             "source": "源"
@@ -2307,35 +3214,30 @@
         "outputs": {
             "model_3d": "模型3D",
             "mesh": "网格",
-            "base_color": "基础颜色",
-            "normal": "法线",
-            "metallic_roughness": "金属度粗糙度",
-            "emissive": "自发光",
-            "occlusion": "遮挡",
             "report": "报告"
         }
     },
     "WASMeshClean": {
-        "title": "WASMesh干净",
+        "title": "WAS网格节点干净",
         "inputs": {
             "model_3d": "模型3D",
-            "self_intersections": "自身交集"
+            "self_intersections": "自身交叉口、交点"
         },
         "widgets": {
             "weld": "焊接",
             "weld_distance": "焊接距离",
-            "remove_degenerate": "移除Degenerate",
-            "remove_small_shells": "移除小壳",
+            "remove_degenerate": "移除退化的、退化样本",
+            "remove_small_shells": "移除小壳、外壳",
             "fix_non_manifold": "修复非流形",
-            "orient_faces": "Orient人脸",
+            "orient_faces": "定向、使朝东人脸",
             "fill_holes": "填充孔洞",
             "max_hole_edges": "最大值孔洞填充边缘",
-            "recompute_normals": "Recompute法线",
+            "recompute_normals": "重新计算法线",
             "crease_angle": "折痕角度",
             "shell_min_faces": "壳最小值人脸",
             "shell_min_area": "壳最小值区域",
-            "intersecting_max_area": "Intersecting最大值区域",
-            "remove_unreferenced": "移除Unreferenced",
+            "intersecting_max_area": "相交的最大值区域",
+            "remove_unreferenced": "移除未被引用的",
             "parts": "部件"
         },
         "outputs": {
@@ -2345,7 +3247,7 @@
         }
     },
     "WASMeshCut": {
-        "title": "WASMesh裁切",
+        "title": "WAS网格节点裁切",
         "inputs": {
             "model_3d": "模型3D",
             "axis": "坐标轴",
@@ -2371,7 +3273,7 @@
         }
     },
     "WASMeshDecimate": {
-        "title": "WASMesh简化",
+        "title": "WAS网格节点简化",
         "inputs": {
             "model_3d": "模型3D",
             "target": "目标",
@@ -2394,12 +3296,12 @@
         }
     },
     "WASMeshInspect": {
-        "title": "WASMesh检查",
+        "title": "WAS网格节点检查",
         "inputs": {
             "model_3d": "模型3D"
         },
         "widgets": {
-            "self_intersections": "自身交集",
+            "self_intersections": "自身交叉口、交点",
             "uv_resolution": "Uv分辨率",
             "parts": "部件"
         },
@@ -2414,7 +3316,7 @@
         }
     },
     "WASMeshProjectViews": {
-        "title": "WASMesh项目多视图",
+        "title": "WAS网格节点项目多视图",
         "inputs": {
             "model_3d": "模型3D",
             "views": "多视图",
@@ -2441,7 +3343,7 @@
         }
     },
     "WASMeshRemesh": {
-        "title": "WASMesh重新网格化",
+        "title": "WAS网格节点重新网格化",
         "inputs": {
             "model_3d": "模型3D",
             "mode": "模式",
@@ -2450,7 +3352,7 @@
         "widgets": {
             "faces": "人脸",
             "edge_length": "边缘时长",
-            "adaptivity": "adaptivity",
+            "adaptivity": "自适应能力",
             "feature_angle": "特征角度",
             "keep_uv_seams": "保留Uv接缝",
             "iterations": "迭代次数",
@@ -2463,7 +3365,7 @@
         }
     },
     "WASMeshRenderViews": {
-        "title": "WASMesh渲染多视图",
+        "title": "WAS网格节点渲染多视图",
         "inputs": {
             "model_3d": "模型3D",
             "views": "多视图",
@@ -2488,7 +3390,7 @@
         }
     },
     "WASMeshRetopology": {
-        "title": "WASMesh重拓扑",
+        "title": "WAS网格节点重拓扑",
         "inputs": {
             "model_3d": "模型3D",
             "output": "输出",
@@ -2498,7 +3400,7 @@
         "widgets": {
             "target_faces": "目标人脸",
             "crease_angle": "折痕角度",
-            "adaptivity": "adaptivity",
+            "adaptivity": "自适应能力",
             "keep_borders": "保留边框",
             "smoothing": "平滑处理",
             "parts": "部件"
@@ -2510,7 +3412,7 @@
         }
     },
     "WASMeshSmooth": {
-        "title": "WASMesh平滑",
+        "title": "WAS网格节点平滑",
         "inputs": {
             "model_3d": "模型3D",
             "method": "方法"
@@ -2531,7 +3433,7 @@
         }
     },
     "WASMeshSubdivide": {
-        "title": "WASMesh细分",
+        "title": "WAS网格节点细分",
         "inputs": {
             "model_3d": "模型3D",
             "scheme": "方案"
@@ -2550,7 +3452,7 @@
         }
     },
     "WASMeshSymmetrize": {
-        "title": "WASMesh Symmetrize",
+        "title": "WAS网格节点对称化",
         "inputs": {
             "model_3d": "模型3D",
             "axis": "坐标轴",
@@ -2558,7 +3460,7 @@
             "plane": "平面"
         },
         "widgets": {
-            "symmetrize_skeleton": "Symmetrize骨架",
+            "symmetrize_skeleton": "对称化骨架",
             "seam_distance": "拼接距离",
             "parts": "部件"
         },
@@ -2568,7 +3470,7 @@
         }
     },
     "WASMeshUnwrap": {
-        "title": "WASMesh展开",
+        "title": "WAS网格节点展开",
         "inputs": {
             "model_3d": "模型3D",
             "quality": "画质"
@@ -2612,7 +3514,8 @@
         "widgets": {
             "metalness": "金属度",
             "min_roughness": "最小值粗糙度",
-            "parts": "部件"
+            "parts": "部件",
+            "metal_min_brightness": "金属最小值亮度"
         },
         "outputs": {
             "model_3d": "模型3D",
@@ -2624,8 +3527,8 @@
         "inputs": {
             "model_3d": "模型3D",
             "avatar_permission": "虚拟形象Permission",
-            "commercial_usage": "Commercial使用率",
-            "credit_notation": "Credit记法",
+            "commercial_usage": "商业的；广告片使用率",
+            "credit_notation": "信用；署名；花费额度记法",
             "modification": "修改",
             "allow_redistribution": "允许重新分配",
             "allow_excessively_violent_usage": "允许Excessively剧烈使用率",
@@ -2659,11 +3562,11 @@
             "keep": "保留",
             "drop": "丢弃",
             "merge_by_material": "合并通过材质",
-            "split_shells": "拆分壳",
+            "split_shells": "拆分壳、外壳",
             "rename": "重命名",
             "labels": "标签",
             "parts": "部件",
-            "max_shells": "最大值壳"
+            "max_shells": "最大值壳、外壳"
         },
         "outputs": {
             "model_3d": "模型3D",
@@ -2710,7 +3613,7 @@
         }
     },
     "WASBluePixelScheduler": {
-        "title": "WASBlue像素调度器",
+        "title": "WAS蓝色节点包像素调度器",
         "inputs": {
             "latent": "潜空间"
         },
@@ -2750,7 +3653,7 @@
         "widgets": {
             "start_scale": "开始缩放",
             "grow_at": "增长在",
-            "renoise_steps": "Renoise步数",
+            "renoise_steps": "加噪、重新加噪步数",
             "noise_scale": "噪声尺度"
         },
         "outputs": {
@@ -2804,7 +3707,7 @@
         }
     },
     "WASStringList": {
-        "title": "WASString列表",
+        "title": "WAS字符串列表",
         "inputs": {
             "text": "文本",
             "text_2": "文本2",
@@ -2881,7 +3784,7 @@
         }
     },
     "WASMultilineTextAdvanced": {
-        "title": "WASMultiline文本高级",
+        "title": "WAS多行文本高级",
         "inputs": {
             "join_with": "按符号拼接",
             "text": "文本"
@@ -2897,8 +3800,7 @@
         }
     },
     "WASJSONValidate": {
-        "title": "WASJSONValidate",
-        "inputs": {},
+        "title": "WAS JSON校验",
         "widgets": {
             "text": "文本",
             "repair": "修复",
@@ -2909,10 +3811,11 @@
             "valid": "有效",
             "repaired": "已修复",
             "error": "错误"
-        }
+        },
+        "inputs": {}
     },
     "WASRevisePrompt": {
-        "title": "WASRevise提示词",
+        "title": "WAS文本改写提示词",
         "inputs": {
             "clip": "CLlP",
             "feedback": "反馈",
@@ -2946,7 +3849,6 @@
             "separator": "分隔符"
         },
         "outputs": {
-            "text": "文本",
             "texts": "文本",
             "changed": "已更改",
             "unmatched": "未匹配"
@@ -2983,7 +3885,6 @@
             "quotes": "引号"
         },
         "outputs": {
-            "text": "文本",
             "changed": "已更改"
         }
     },
@@ -3031,7 +3932,6 @@
     },
     "BreezeVoiceDesign": {
         "title": "微风语音设计风格",
-        "inputs": {},
         "widgets": {
             "description": "描述",
             "preview_text": "预览文本"
@@ -3039,7 +3939,8 @@
         "outputs": {
             "voice": "语音",
             "preview": "预览"
-        }
+        },
+        "inputs": {}
     },
     "BreezeVoiceClone": {
         "title": "微风语音克隆",
@@ -3070,16 +3971,16 @@
         }
     },
     "BreezeVoiceLocalize": {
-        "title": "微风语音Localize",
+        "title": "微风语音本地化",
         "inputs": {
             "voice": "语音",
             "language": "语言"
         },
-        "widgets": {},
         "outputs": {
             "voice": "语音",
             "preview": "预览"
-        }
+        },
+        "widgets": {}
     },
     "CreatifyBorealH3VideoNode": {
         "title": "创意生成Boreal H3视频节点",
@@ -3189,10 +4090,10 @@
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "video": "视频"
-        }
+        },
+        "widgets": {}
     },
     "HeyGenAvatar6IdentityToVideoNode": {
         "title": "虚拟人虚拟形象6身份生成视频节点",
@@ -3267,10 +4168,10 @@
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "string": "字符串"
-        }
+        },
+        "widgets": {}
     },
     "Kling4ImageNode": {
         "title": "可灵4图像节点",
@@ -3309,20 +4210,20 @@
         "inputs": {
             "video": "视频"
         },
-        "widgets": {},
         "outputs": {
             "matte": "遮罩"
-        }
+        },
+        "widgets": {}
     },
     "LtxApiVideoSdrToHdr": {
         "title": "Ltx Api视频SDR到高动态",
         "inputs": {
             "video": "视频"
         },
-        "widgets": {},
         "outputs": {
             "video": "视频"
-        }
+        },
+        "widgets": {}
     },
     "LtxApiVideoReframe": {
         "title": "Ltx Api视频重新构图",
@@ -3346,10 +4247,10 @@
             "video": "视频",
             "resolution": "分辨率"
         },
-        "widgets": {},
         "outputs": {
             "video": "视频"
-        }
+        },
+        "widgets": {}
     },
     "MinimaxHailuo03MaxRecastNode": {
         "title": "海螺03最大值重转换节点",
@@ -3373,10 +4274,10 @@
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "video": "视频"
-        }
+        },
+        "widgets": {}
     },
     "MinimaxHailuo03MaxReframeVideoNode": {
         "title": "海螺03最大值重新构图视频节点",
@@ -3474,31 +4375,31 @@
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "image": "图像"
-        }
+        },
+        "widgets": {}
     },
     "OpenAIGPTImageGIFNode": {
-        "title": "开启AI图文生成GIFNode",
+        "title": "开启AI图文生成GIF动图节点",
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "frames": "帧",
             "fps": "帧率"
-        }
+        },
+        "widgets": {}
     },
     "OpenAIGPTImageSVGNode": {
-        "title": "开启AI图文生成SVGNode",
+        "title": "开启AI图文生成SVG节点",
         "inputs": {
             "model": "模型"
         },
-        "widgets": {},
         "outputs": {
             "s_v_g": "s v g"
-        }
+        },
+        "widgets": {}
     },
     "PikaH3FlexVideoNode": {
         "title": "视频生成H3弹性视频节点",
@@ -3545,14 +4446,14 @@
     },
     "PikaSFXNode": {
         "title": "视频生成音效节点",
-        "inputs": {},
         "widgets": {
             "prompt": "提示词",
             "duration": "时长"
         },
         "outputs": {
             "audio": "音频"
-        }
+        },
+        "inputs": {}
     },
     "PikaMusicNode": {
         "title": "视频生成音乐节点",
@@ -3571,7 +4472,7 @@
         }
     },
     "PrunaPVideoUpscaleNode": {
-        "title": "Pruna PVideo放大节点",
+        "title": "PrunaP视频放大节点",
         "inputs": {
             "video": "视频",
             "target": "目标",
@@ -3599,7 +4500,7 @@
         }
     },
     "TripoSmartUVNode": {
-        "title": "Tripo智能模式UVNode",
+        "title": "Tripo智能模式UV节点",
         "inputs": {
             "model_task_id": "模型任务ID"
         },
@@ -3627,7 +4528,6 @@
     },
     "BatchCameras": {
         "title": "批次来到RA列表",
-        "inputs": {},
         "widgets": {
             "camera_info1": "相机信息1",
             "camera_info2": "相机信息2",
@@ -3682,7 +4582,8 @@
         },
         "outputs": {
             "camera_info": "相机信息"
-        }
+        },
+        "inputs": {}
     },
     "BakeTextureFromViews": {
         "title": "烘焙纹理从多视图",
@@ -3695,7 +4596,7 @@
         "widgets": {
             "resolution": "分辨率",
             "blend_exponent": "混合指数",
-            "fill_unseen": "填充Unseen"
+            "fill_unseen": "填充未见过的"
         },
         "outputs": {
             "base_color": "基础颜色",
@@ -3852,15 +4753,15 @@
         }
     },
     "VAEComputeDtype": {
-        "title": "VAECompute数据类型",
+        "title": "VAE计算数据类型",
         "inputs": {
             "vae": "vae",
             "dtype": "数据类型"
         },
-        "widgets": {},
         "outputs": {
             "vae": "vae"
-        }
+        },
+        "widgets": {}
     },
     "SenseNovaConditioning": {
         "title": "感知新星特效条件",
@@ -3889,12 +4790,12 @@
             "conditioning": "条件",
             "samples": "样本"
         },
-        "widgets": {},
         "outputs": {
             "text": "文本",
             "images": "图像",
             "thinking": "思考中"
-        }
+        },
+        "widgets": {}
     },
     "TextGenerateV2": {
         "title": "文本生成V2",
@@ -3917,8 +4818,7 @@
             "use_default_template": "使用默认模板"
         },
         "outputs": {
-            "generated_text": "生成文本",
-            "thinking": "思考中"
+            "generated_text": "生成文本"
         }
     },
     "UltraTexConditioning": {
@@ -3932,13 +4832,13 @@
             "reference_mask": "参考遮罩",
             "extra_views": "额外多视图"
         },
-        "widgets": {},
         "outputs": {
             "conditioning": "条件"
-        }
+        },
+        "widgets": {}
     },
     "VideoDeflicker": {
-        "title": "视频Deflicker",
+        "title": "视频去闪烁",
         "inputs": {
             "optical_flow": "光流",
             "images": "图像",
@@ -3954,16 +4854,16 @@
         }
     },
     "RelayVSRConditioning": {
-        "title": "中继VSRConditioning",
+        "title": "中继视频超分条件",
         "inputs": {
             "model": "模型",
             "images": "图像"
         },
-        "widgets": {},
         "outputs": {
             "positive": "正面条件",
             "latent": "潜空间"
-        }
+        },
+        "widgets": {}
     },
     "VSRDecode": {
         "title": "VSR Decode",
@@ -4001,19 +4901,19 @@
     },
     "ComflyConcurrent_T8Zhenzhen_Seedream_55_Image_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞梦境视频55图像低价格提交",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "task": "任务"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "ComflyConcurrent_T8Zhenzhen_Seedream_55_Layers_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞梦境视频55图层低价格提交",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "task": "任务"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "ComflyConcurrent_T8Zhenzhen_Seedance_25_Draft_To_Video_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞视频生成25草稿生成视频低价格提交",
@@ -4064,43 +4964,43 @@
     },
     "ComflyConcurrent_T8Zhenzhen_Z_Image_T2I_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞Z图像文本生成图像低价格提交",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "task": "任务"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "ComflyConcurrent_T8Zhenzhen_Krea_V3_Image_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞Krea V3图像低价格提交",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "task": "任务"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "ComflyConcurrent_T8Zhenzhen_Hitem3D_V2_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞Hitem3D V2低价格提交",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "task": "任务"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "ComflyConcurrent_T8Zhenzhen_Hitem3D_Portrait_21_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞Hitem3D肖像21低价格提交",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "task": "任务"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "ComflyConcurrent_T8Zhenzhen_Meshy_6_Global_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞3D建模6全局低价格提交",
-        "inputs": {},
-        "widgets": {},
         "outputs": {
             "task": "任务"
-        }
+        },
+        "inputs": {},
+        "widgets": {}
     },
     "ComflyConcurrent_T8Zhenzhen_Video_G_Omni_12_Flash_LowPrice_Submit": {
         "title": "贞贞并发T8贞贞视频G全模态通用12极速加速低价格提交",
@@ -4118,13 +5018,13 @@
     },
     "ComflyConcurrent_T8Zhenzhen_GPT_Image_2_6_Workshop_Submit": {
         "title": "贞贞并发T8贞贞GPT图像26工作工坊提交",
-        "inputs": {},
         "widgets": {
             "prompt": "提示词"
         },
         "outputs": {
             "task": "任务"
-        }
+        },
+        "inputs": {}
     },
     "ChaoBatchLoadImages": {
         "title": "超批次加载图像",
@@ -4221,9 +5121,12 @@
             "ref_image_9": "参考图像9",
             "story_name": "故事模式名称",
             "manager_settings": "管理器设置",
+            "video_desc": "视频描述",
+            "image_desc": "图像描述",
             "prompt": "提示词"
         },
         "outputs": {
+            "videos": "视频",
             "merged_video": "已合并视频",
             "segment_files": "分段文件"
         }
@@ -4880,7 +5783,7 @@
         "inputs": {
             "video": "视频",
             "episode_title": "剧集标题",
-            "drama_name": "戏剧风格名称"
+            "drama_name": "短剧名称"
         },
         "widgets": {
             "output_path": "输出路径",
@@ -4892,7 +5795,7 @@
         }
     },
     "MiniMaxH3BatchShortDramaPlanner": {
-        "title": "海螺H3批次短戏剧风格规划器",
+        "title": "海螺H3批次短短剧规划器",
         "inputs": {},
         "widgets": {},
         "outputs": {}
@@ -5800,12 +6703,12 @@
         "title": "WAS音频立体图像生成器",
         "inputs": {
             "audio": "音频",
-            "haas_side": "Haas边"
+            "haas_side": "哈斯边"
         },
         "widgets": {
             "width": "宽度",
             "mono_below_hz": "单声道下方赫兹",
-            "haas_ms": "Haas毫秒",
+            "haas_ms": "哈斯毫秒",
             "balance": "平衡",
             "output_db": "输出分贝"
         },
@@ -6177,7 +7080,7 @@
             "precision": "精度",
             "recall": "召回率",
             "average_precision": "平均精度",
-            "ndcg": "ndcg"
+            "ndcg": "NDCU GPU指标监控组件"
         },
         "outputs": {
             "hit_rate": "命中速率",
@@ -7180,7 +8083,7 @@
         },
         "widgets": {
             "strength": "强度",
-            "adaln_fp32": "Adaln FP32精度"
+            "adaln_fp32": "自适应层归一化FP32精度"
         },
         "outputs": {
             "model": "模型"
@@ -8093,7 +8996,7 @@
         "widgets": {}
     },
     "IdeogramVectorImageToSVGApi": {
-        "title": "文字生成向量图像至SVGApi",
+        "title": "文字生成向量图像至SVG接口",
         "inputs": {
             "model": "模型"
         },
@@ -8259,7 +9162,7 @@
         }
     },
     "JZL_MiniMaxAssetManagerShortDrama": {
-        "title": "JZL海螺资产管理器短戏剧风格",
+        "title": "JZL海螺资产管理器短短剧",
         "inputs": {
             "run_mode": "执行模式",
             "aspect_ratio": "宽高比",
@@ -8934,7 +9837,7 @@
             "speech_reference": "语音参考",
             "speech_text": "语音文本",
             "timed_transcript_json": "时序定时文本转写Json",
-            "subtitles_srt": "子标题Srt"
+            "subtitles_srt": "字幕Srt"
         }
     },
     "MiniMaxH3SegmentVideoInitialize": {
@@ -38800,7 +39703,7 @@
             "units": "单位",
             "loop": "循环",
             "root_motion": "根动态",
-            "feet": "feet"
+            "feet": "英尺；脚"
         },
         "widgets": {
             "clip": "CLlP",
@@ -40505,7 +41408,7 @@
             "master_audio": "主音频",
             "bgm_audio": "音乐音频",
             "room_tone_audio": "房间色调音频",
-            "source_subtitles": "源子标题",
+            "source_subtitles": "源字幕",
             "delivery_preset": "交付预设"
         },
         "widgets": {
@@ -40684,7 +41587,7 @@
         }
     },
     "MiniMaxH3LoRACompatibilityLoaderT8Advanced": {
-        "title": "海螺H3LoRA兼容性加载器T8高级",
+        "title": "海螺H3低噪声RA兼容性加载器T8高级",
         "inputs": {
             "model": "模型",
             "lora_name": "LoRA名称",
@@ -42563,7 +43466,7 @@
             "ignore_first_value": "忽略首个数值",
             "max_values_per_loop": "单循环最大数值",
             "loops": "循环",
-            "ping_pong": "往复循环"
+            "ping_pong": "往返探测"
         },
         "outputs": {
             "FLOAT": "浮点数",
@@ -51576,7 +52479,7 @@
             "max_perimeter": "最大值周长",
             "weld_epsilon_rel": "焊接相对噪声扰动值",
             "max_vertices": "最大值顶点",
-            "fill_chains": "填充链式"
+            "fill_chains": "填充链条"
         },
         "outputs": {
             "mesh": "网格"
@@ -52741,6 +53644,7 @@
             "images": "图像",
             "root": "根",
             "extension": "扩展名",
+            "gallery": "图库",
             "bit_depth": "位深度",
             "profile": "配置",
             "filenames": "文件名",
@@ -55630,7 +56534,7 @@
             "interpolate_from_original": "从原图插值",
             "change_background": "更换背景",
             "preserve_details": "保留细节",
-            "whites": "白色",
+            "whites": "白色部分、白场",
             "blacks": "黑场",
             "brightness": "亮度",
             "contrast": "对比度",
@@ -89375,7 +90279,7 @@
             "end": "结束",
             "step": "步数",
             "loops": "循环",
-            "ping_pong": "往复循环"
+            "ping_pong": "往返探测"
         },
         "outputs": {
             "FLOAT": "浮点数",
@@ -89780,7 +90684,7 @@
             "end": "结束",
             "step": "步数",
             "loops": "循环",
-            "ping_pong": "往复循环"
+            "ping_pong": "往返探测"
         },
         "outputs": {
             "INT": "整数",
@@ -92097,7 +93001,7 @@
             "end": "结束",
             "step": "步数",
             "loops": "循环",
-            "ping_pong": "往复循环"
+            "ping_pong": "往返探测"
         },
         "outputs": {
             "INT": "整数",
