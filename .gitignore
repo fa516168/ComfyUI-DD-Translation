@@ -1,0 +1,20 @@
+# 运行环境 / 调试 / 旧仓库备份
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.dbg/
+.git_backup/
+.vscode/
+*.log
+.env
+
+# 本地配置：节点启动时会自建，默认值即可，不入库
+config.json
+
+# 用户数据：翻译工具工作目录、导出结果、临时备份
+翻译/
+*.csv
+*.bak_*
+*.bak_*_*

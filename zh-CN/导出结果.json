@@ -1,0 +1,18 @@
+{
+    "H21Lo": "H21Lo",
+    "H3MCSigma": "H3 MC Sigma",
+    "Fey": "Fey",
+    "SVGApi": "SVG API",
+    "WASFibo2": "WAS Fibo2",
+    "WASFlux3": "WAS Flux3",
+    "WASLLMAnthropic": "WAS LLM Anthropic",
+    "WASLLMGemini": "WAS LLM Gemini",
+    "WASLLMToken": "WAS LLM Token",
+    "WASLLMTransformers": "WAS LLM Transformers",
+    "WASPika": "WAS Pika",
+    "WASRoPE": "WAS RoPE",
+    "H3Solar": "H3 Solar",
+    "Mirelo": "Mirelo",
+    "H21": "H21",
+    "T8H3": "T8H3"
+}
